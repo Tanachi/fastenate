@@ -2,4 +2,69 @@ body {
   h1 {
     background-color: #fff;
   }
+  margin: -10px;
+  .headerBar{
+    display:flex;
+    background-color: #fff;
+    justify-content: space-between;
+    .logo{
+      margin: 20px;
+    }
+
+    .buttonPlus{
+      width:50px;
+      margin:30px;
+      font-size: 400%;
+      color:red;
+      border-style:solid;
+      border-color:orange;
+      text-align:center;
+    }
+    .buttonPlus:hover {
+      background-color: orange;
+      color:white;
+    }
+  }
+  .buttonBar{
+    display:flex;
+    .jButton{
+      background-color:#303030;
+      flex: 1 1 33.33333%;
+      font-size: 200%;
+      color:grey;
+    }
+    .jButton:hover {
+    color:orange;
+    }
+  }
+  .article{
+    display:flex;
+    margin: 20px;
+    flex-direction:column;
+    background-color: #fff;
+    text-align:left;
+    .imageArea{
+      align-self:center;
+      height: 400px;
+      width: 400px;
+      heigh:auto;
+      background-size:cover;
+      margin: 20px;
+    }
+    .titleArea{
+      margin: 20px;
+    }
+    .infoArea{
+      margin: 20px;
+    }
+    .descriptArea{
+      margin: 20px;
+    }
+  }
+
+  .article:hover{
+    border-style:solid;
+    border-color:orange;
+  }
+  background-image:url(../assets/bg.jpg);
 }
