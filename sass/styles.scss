@@ -1,24 +1,58 @@
+@import 'partials/clearfix';
+@import 'partials/general_styles';
+@import 'partials/reset';
+$small:'only screen and (min-width: 200px) and (max-width: 599px)';
+$medium:'only screen and (min-width: 600px) and (max-width: 899px)';
+$large:'(max-width: 900px)';
+@mixin small{
+  @media #{small}{
+    @content;
+  }
+}
+@mixin medium{
+  @media #{medium}{
+    @content;
+  }
+}
+@mixin large{
+  @media #{large}{
+    @content;
+  }
+}
 body {
   h1 {
     background-color: #fff;
   }
-  margin: -10px;
   .headerBar{
     display:flex;
-    background-color: #fff;
-    justify-content: space-between;
-    .logo{
-      margin: 20px;
+    justify-content:space-between;
+    @include respond-to('medium'){
+      .logo{
+        display:none;
+      }
+      background: url('/assets/header_bg.svg') no-repeat center, url('/assets/logo.svg') no-repeat center;
+      background-color: #fff;
     }
-
+    @include respond-to('large'){
+      .logo{
+        display:none;
+      }
+      background: url('/assets/header_bg.svg') no-repeat center, url('/assets/logo.svg') no-repeat center;
+      background-color: #fff;
+    }
+    background-color: #fff;
     .buttonPlus{
       width:50px;
-      margin:30px;
+      margin:10px;
       font-size: 400%;
       color:red;
       border-style:solid;
       border-color:orange;
       text-align:center;
+      @include respond-to('medium'){
+      }
+      @include respond-to('large'){
+      }
     }
     .buttonPlus:hover {
       background-color: orange;
